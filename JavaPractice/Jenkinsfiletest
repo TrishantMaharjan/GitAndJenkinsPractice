@@ -9,12 +9,12 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'javac Area.java'
+        sh 'JavaPractice/javac Area.java'
       }
     }
     stage('Test') {
       steps {
-        sh 'java Area'
+        sh 'JavaPractice/java Area'
       }
     }
   }

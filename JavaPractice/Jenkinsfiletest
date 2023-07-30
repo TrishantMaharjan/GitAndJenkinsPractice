@@ -1,5 +1,9 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'openjdk:22-ea-7-slim'
+    }
+  }
   stages {
     stage('Checkout') {
       steps {
@@ -9,12 +13,12 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'JavaPractice/javac Area.java'
+        sh 'javac JavaPractice/Area.java'
       }
     }
     stage('Test') {
       steps {
-        sh 'JavaPractice/java Area'
+        sh 'java JavaPractice/Area'
       }
     }
   }

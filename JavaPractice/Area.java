@@ -14,6 +14,7 @@ public class Area {
       			choice = sc.nextInt();
     		} catch (Exception e) {
       			choice=random.nextInt(3 - 1 + 1) + 1;
+			System.out.println(choice);
     		}
 		if (choice == 1) {
 			float r, pi = 22/7f;
@@ -22,32 +23,37 @@ public class Area {
       				r = sc.nextFloat();
     			} catch (Exception e) {
       				r=random.nextInt(90 - 1 + 1) + 1;
+				System.out.println(r);
     			}
 			area = (pi*r*r);
 		}
 		if (choice == 2) {
 			float b, h;
+			System.out.println("Enter Breadth ");
+			System.out.println("Enter Height ");
 			try {
-      				System.out.println("Enter Breadth ");
 				b = sc.nextFloat();
-				System.out.println("Enter Height ");
 				h = sc.nextFloat();
     			} catch (Exception e) {
       				b=random.nextInt(90 - 1 + 1) + 1;
 				h=random.nextInt(90 - 1 + 1) + 1;
+				System.out.println(b);
+				System.out.println(h);
     			}
 			area = (b*h)/2;
 		}
 		if (choice == 3) {
 			float l, b;
+			System.out.println("Enter Length ");
+			System.out.println("Enter Breadth ");
 			try {
-      				System.out.println("Enter Length ");
 				l = sc.nextFloat();
-				System.out.println("Enter Breadth ");
 				b = sc.nextFloat();
     			} catch (Exception e) {
       				b=random.nextInt(90 - 1 + 1) + 1;
 				l=random.nextInt(90 - 1 + 1) + 1;
+				System.out.println(l);
+				System.out.println(b);
     			}
 			area = (b*l);
 		}

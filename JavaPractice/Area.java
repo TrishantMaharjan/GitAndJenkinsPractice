@@ -11,7 +11,7 @@ public class Area {
 		try {
       			choice = sc.nextInt();
     		} catch (Exception e) {
-      			choice=1;
+      			choice=random.nextInt(3 - 1 + 1) + 1;
     		}
 		if (choice == 1) {
 			float r=7, pi = 22/7f;

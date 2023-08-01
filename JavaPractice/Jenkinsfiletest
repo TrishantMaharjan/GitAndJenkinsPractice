@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'openjdk:22-ea-7-slim'
+      image 'maven:3.9.3-amazoncorretto-8-debian'
     }
   }
   stages {

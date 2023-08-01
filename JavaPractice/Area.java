@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class Area {
 	public static void main(String[] args) {
@@ -11,6 +12,7 @@ public class Area {
 		try {
       			choice = sc.nextInt();
     		} catch (Exception e) {
+			Random random = new Random();
       			choice=random.nextInt(3 - 1 + 1) + 1;
     		}
 		if (choice == 1) {

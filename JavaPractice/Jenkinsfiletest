@@ -13,12 +13,12 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'javac JavaPractice/Area.java'
+        sh 'javac JavaPractice/Table.java'
       }
     }
     stage('Test') {
       steps {
-        sh 'cd JavaPractice && java Area'
+        sh 'cd JavaPractice && java Table'
       }
     }
   }

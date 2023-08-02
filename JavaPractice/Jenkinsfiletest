@@ -11,6 +11,11 @@ pipeline {
         git branch: 'main', url: 'https://github.com/TrishantMaharjan/GitAndJenkinsPractice.git'
       }
     }
+    stage('Build') {
+      steps {
+        sh 'javac JavaPractice/Area.java'
+      }
+    }
     stage('Static Code Analysis') {
       environment {
         SONAR_URL = "http://172.16.147.131:9000/"
@@ -19,11 +24,6 @@ pipeline {
         withCredentials([string(credentialsId: 'sonarqube', variable: 'SONAR_AUTH_TOKEN')]) {
           sh 'cd JavaPractice sonar-scanner -Dsonar.projectKey=Area -Dsonar.login=$SONAR_AUTH_TOKEN -Dsonar.host.url=${SONAR_URL}'
         }
-      }
-    }
-    stage('Build') {
-      steps {
-        sh 'javac JavaPractice/Area.java'
       }
     }
     stage('Test') {
